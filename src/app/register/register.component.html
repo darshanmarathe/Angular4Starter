@@ -1,0 +1,54 @@
+
+<div class="form">
+<h2>Register</h2>
+  <form  #userForm = "ngForm" (ngSubmit)="onSubmit(userForm.value)" >
+    <fieldset>
+      <legend><span class="number">1</span> Candidate Info</legend>
+      <input type="text" name="firstname" placeholder="Your Name *" ngModel>
+      <input type="email" name="email" placeholder="Your Email *" ngModel>
+      <textarea name="about" placeholder="About yourself" ngModel></textarea>
+      <label for="job">Interests:</label>
+      <select id="job" name="job" ngModel>
+<optgroup label="Indoors">
+  <option value="fishkeeping">Fishkeeping</option>
+  <option value="reading">Reading</option>
+  <option value="boxing">Boxing</option>
+  <option value="debate">Debate</option>
+  <option value="gaming">Gaming</option>
+  <option value="snooker">Snooker</option>
+  <option value="other_indoor">Other</option>
+</optgroup>
+<optgroup label="Outdoors">
+  <option value="football">Football</option>
+  <option value="swimming">Swimming</option>
+  <option value="fishing">Fishing</option>
+  <option value="climbing">Climbing</option>
+  <option value="cycling">Cycling</option>
+  <option value="other_outdoor">Other</option>
+</optgroup>
+</select>
+    </fieldset>
+    <fieldset>
+      <legend><span class="number">2</span> Additional Info</legend>
+      <textarea name="school" placeholder="About Your School" ngModel></textarea>
+    </fieldset>
+    <input type="submit" value="Apply" />
+  </form>
+</div>
+
+<!-- <ul>
+  <ul>
+    <li *ngFor="let item of Genders" >
+      <div *ngIf="item == 'Male'; then iftemplate else elseTemplate">
+        
+      </div>
+        <ng-template #iftemplate>
+          <span style="color:red">{{item}}</span>
+        </ng-template>
+        <ng-template #elseTemplate>
+          <span style="color:green">{{item}}</span>
+        </ng-template>
+      
+    </li>
+  </ul>
+</ul> -->

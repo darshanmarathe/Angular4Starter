@@ -1,0 +1,15 @@
+
+<form [formGroup]="form" class="form" (ngSubmit)="onSubmit(form.value)">
+<h2>Login</h2>
+  <label > {{labels.UserName}}
+  <input type="text" formControlName="username" name="username" placeholder="{{labels.UserName}}">
+  </label>
+  <br>
+
+  <label > {{labels.Password}}
+  <input type="password" formControlName="password" placeholder="{{labels.Password}}">
+  </label>
+  <br>
+  <input type="submit" value="register">
+  <input type="reset" value="reset">
+</form>
