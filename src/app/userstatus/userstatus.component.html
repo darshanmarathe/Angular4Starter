@@ -1,0 +1,10 @@
+      <div *ngIf="User.username == ''; then iftemplate else elseTemplate">
+        
+      </div>
+        <ng-template #iftemplate>
+          <span style="color:red"><a routerLink="/login">Login</a> </span>
+        </ng-template>
+        <ng-template #elseTemplate>
+          <span style="color:green">Logged in as {{User.username}}</span>
+        </ng-template>
+      

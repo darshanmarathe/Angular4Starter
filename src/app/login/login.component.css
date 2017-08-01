@@ -103,3 +103,20 @@
 {
     background: #109177;
 }
+
+
+.form input[type="submit"]:disabled,
+.form input[type="reset"]:disabled,
+.form input[type="button"]:disabled
+{
+     color: silver;
+    margin: 0 auto;
+    background: red;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 2px solid white;
+   
+
+}

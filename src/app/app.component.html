@@ -1,14 +1,23 @@
-
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
     Welcome to {{title}}!
   </h1>
 </div>
-<app-menu></app-menu>
-
-<router-outlet></router-outlet>
+<table>
+  <tr>
+    <td>
+      <app-menu></app-menu>
+   </td>
+    <td rowspan="2">
+      <app-news></app-news>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <router-outlet></router-outlet>
+    </td>
+  </tr>
+</table>
 
 <app-footer></app-footer>
-
-  

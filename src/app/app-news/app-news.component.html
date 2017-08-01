@@ -1,0 +1,9 @@
+<h2>news section</h2>
+<hr>
+<ul>
+  <li *ngFor="let item of NewsCol" >
+      <em>{{item.title}}</em>
+      <br>
+      <p>{{item.desc | bigtext : 300}}</p>
+  </li>
+</ul>

@@ -1,3 +1,4 @@
+import { UserDataService } from './../Services/user-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -18,6 +19,7 @@ export class RegisterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+   
   }
 
 

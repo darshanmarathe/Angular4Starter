@@ -10,6 +10,6 @@
   <input type="password" formControlName="password" placeholder="{{labels.Password}}">
   </label>
   <br>
-  <input type="submit" value="register">
+  <input type="submit" [disabled]="!form.valid" value="register">
   <input type="reset" value="reset">
 </form>

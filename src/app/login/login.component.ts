@@ -1,5 +1,7 @@
+import { User } from './../Models/User';
+import { UserDataService } from './../Services/user-data.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms'
+import { FormGroup, FormControl , Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-login',
@@ -16,17 +18,21 @@ export class LoginComponent implements OnInit {
   }
 
 
-  onSubmit(user) {
-    console.log(user)
+  onSubmit(user:User) {
+    this.userSrv.Set(user.username , user.password)
   }
 
 
-  constructor() { }
+  constructor(private userSrv:UserDataService) { }
 
   ngOnInit() {
   this.form = new FormGroup({
-      username: new FormControl("Admin"),
-      password: new FormControl("")
+      username: new FormControl("", Validators.compose([
+        Validators.required,
+        Validators.minLength(3),
+        Validators.email
+      ])),
+      password: new FormControl("", Validators.required)
     });
 
   }
