@@ -1,23 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-</div>
-<table>
-  <tr>
-    <td>
-      <app-menu></app-menu>
-   </td>
-    <td rowspan="2">
-      <app-news></app-news>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <router-outlet></router-outlet>
-    </td>
-  </tr>
-</table>
+<search-bar>
+</search-bar>
 
-<app-footer></app-footer>
+<section>
+
+  <app-menu></app-menu>
+  <app-side-bar></app-side-bar>
+
+
+  <section class="content">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+
+</section>

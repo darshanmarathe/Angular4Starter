@@ -20,6 +20,8 @@ import { TodosComponent } from './todos/todos.component';
 import { LoginComponent } from './login/login.component';
 import { UserstatusComponent } from './userstatus/userstatus.component';
 import { AppNewsComponent } from './app-news/app-news.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 
 //App Services
@@ -41,7 +43,9 @@ import { NewsService } from './Services/news.service';
     HomeComponent,
     TodosComponent,
     UserstatusComponent,
-    AppNewsComponent
+    AppNewsComponent,
+    SearchBarComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
