@@ -3,11 +3,11 @@
         <!-- User Info -->
         <div class="user-info">
             <div class="image">
-                <img src="images/user.png" width="48" height="48" alt="User" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcZbrJ_u4mclMOg_M1O3l0cKXjnyVUMtdfXL00u41p3f8K84EteA" width="48" height="48" alt="User" />
             </div>
             <div class="info-container">
-                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                <div class="email">john.doe@example.com</div>
+                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.username}}</div>
+                <div class="email">{{user.username}}</div>
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
@@ -33,22 +33,32 @@
                         <span>Home</span>
                     </a>
                 </li>
-                <li>
+             
+                <li *ngIf="user.username ===  ''">
                     <a routerLink="/login">
                         <i class="material-icons">text_fields</i>
                         <span>Login</span>
                     </a>
                 </li>
+             
+                <li *ngIf="user.username !==  ''">
+                    <a routerLink="/logout">
+                        <i class="material-icons">text_fields</i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            
+             
                 <li>
-                    <a href="pages/helper-classes.html">
+                    <a routerLink="/todos">
                         <i class="material-icons">layers</i>
-                        <span>Helper Classes</span>
+                        <span>Todos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" class="menu-toggle">
+                    <a routerLink="/Contact" class="menu-toggle">
                         <i class="material-icons">widgets</i>
-                        <span>Widgets</span>
+                        <span>Contact</span>
                     </a>
                     <ul class="ml-menu">
                         <li>

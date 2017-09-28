@@ -1,3 +1,4 @@
+
 //pipes
 import { BigTextPipe } from './common/BigText';
 
@@ -28,6 +29,9 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { UserDataService } from './Services/user-data.service';
 import { NewsService } from './Services/news.service';
 
+//Login
+import { AuthGuard } from './_guards/index';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -45,7 +49,8 @@ import { NewsService } from './Services/news.service';
     UserstatusComponent,
     AppNewsComponent,
     SearchBarComponent,
-    SideBarComponent
+    SideBarComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -68,11 +73,20 @@ import { NewsService } from './Services/news.service';
     },
     {
         path: "todos",
-        component : TodosComponent
+        component : TodosComponent,
+        canActivate: [AuthGuard] 
     },
+    {
+        path: "logout",
+        component : LogoutComponent,
+
+    },
+
+    // otherwise redirect to home
+    { path: '**', redirectTo: '/' }
   ])
   ],
-  providers: [UserDataService , NewsService],
+  providers: [UserDataService , NewsService , AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

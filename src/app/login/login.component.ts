@@ -2,6 +2,8 @@ import { User } from './../Models/User';
 import { UserDataService } from './../Services/user-data.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl , Validators } from '@angular/forms'
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -20,10 +22,11 @@ export class LoginComponent implements OnInit {
 
   onSubmit(user:User) {
     this.userSrv.Set(user.username , user.password)
+    this.router.navigate(["/todos"]);
   }
 
 
-  constructor(private userSrv:UserDataService) { }
+  constructor(private router: Router ,private userSrv:UserDataService) { }
 
   ngOnInit() {
   this.form = new FormGroup({
