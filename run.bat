@@ -1,2 +1,1 @@
-ng build aot=true
-ng serve --open
+ng serve --o
