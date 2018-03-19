@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Version } from '@angular/core';
+import { VersionInfo } from '../ViewModels/versionInfo';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public _Vinfo: VersionInfo;
+  constructor() {
+    this._Vinfo = {
+      CompanyName:" InfoxTech Inc."
+      , Version:"1.0.0"
+      , Years :" 2017-18"
+    }
+
+  }
 
   ngOnInit() {
+
   }
 
 }

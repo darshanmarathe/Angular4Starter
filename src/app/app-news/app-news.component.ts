@@ -12,8 +12,8 @@ export class AppNewsComponent implements OnInit {
 
   NewsCol:News[];
 
-  constructor(private newsSvc:NewsService) {
 
+  constructor(private newsSvc:NewsService) {
     this.NewsCol = new Array<News>();
    }
 
@@ -25,14 +25,7 @@ export class AppNewsComponent implements OnInit {
 
         this.NewsCol.push(new News( item.title , item.desc ))
       });
-      console.log(this.NewsCol); 
-       
     })
-    console.log(this.NewsCol )
   }
 
 }
-
-
-
-
